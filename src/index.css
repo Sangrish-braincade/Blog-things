@@ -94,4 +94,36 @@
   .neon-border {
     @apply border border-gaming-neon/30 shadow-[0_0_10px_rgba(0,242,255,0.3)];
   }
+
+  /* Custom carousel styling */
+  .hero-carousel .embla__slide {
+    @apply h-full;
+  }
+  
+  /* Hero carousel navigation buttons */
+  .hero-carousel .embla__button {
+    @apply absolute top-1/2 -translate-y-1/2 z-10 h-10 w-10 flex items-center justify-center 
+           rounded-full bg-black/50 text-white transition-all hover:bg-black/70;
+  }
+  
+  .hero-carousel .embla__button--prev {
+    @apply left-4;
+  }
+  
+  .hero-carousel .embla__button--next {
+    @apply right-4;
+  }
+  
+  /* Carousel indicators */
+  .carousel-indicators {
+    @apply absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10;
+  }
+  
+  .carousel-indicator {
+    @apply h-2 w-8 rounded-full bg-white/50 transition-all;
+  }
+  
+  .carousel-indicator.active {
+    @apply bg-white;
+  }
 }

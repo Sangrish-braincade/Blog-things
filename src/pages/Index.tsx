@@ -4,19 +4,40 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { FeaturedPost } from "@/components/blog/FeaturedPost";
 import { PostCard } from "@/components/blog/PostCard";
 import { Newsletter } from "@/components/blog/Newsletter";
 import { CategoryList } from "@/components/blog/CategoryList";
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
 import { featuredPost, recentPosts, categories } from "@/data/blog-data";
+import { HeroSlide } from "@/components/blog/HeroSlide";
 
 const Index = () => {
+  const heroSlides = [featuredPost, ...recentPosts.slice(0, 3)];
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
         <section className="container py-8 md:py-12">
-          <FeaturedPost post={featuredPost} />
+          <Carousel className="w-full">
+            <CarouselContent>
+              {heroSlides.map((post) => (
+                <CarouselItem key={post.id}>
+                  <HeroSlide post={post} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden sm:block">
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </div>
+          </Carousel>
         </section>
 
         <section className="container py-8 md:py-12">
