@@ -17,7 +17,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
-            <span className="bg-gradient-to-r from-gaming-purple to-gaming-blue bg-clip-text text-xl font-bold text-transparent">
+            <span className="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-xl font-bold text-transparent">
               Aicade
             </span>
           </Link>
@@ -40,8 +40,10 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <Button variant="default" className="hidden rounded-full md:inline-flex">
-            Subscribe
+          <Button 
+          onClick={() => window.open('https://play.aicade.io', '_blank')}
+          variant="default" className="hidden rounded-full md:inline-flex">
+            Play Games
           </Button>
           <Button
             variant="ghost"
@@ -69,8 +71,10 @@ export function Header() {
             <Link to="/about" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
               About
             </Link>
-            <Button variant="default" className="mt-2 w-full rounded-full">
-              Subscribe
+            <Button 
+            onClick={() => window.open('https://play.aicade.io', '_blank')}
+            variant="default" className="mt-2 w-full rounded-full">
+              Play Games
             </Button>
           </nav>
         </div>
