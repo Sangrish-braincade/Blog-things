@@ -24,7 +24,7 @@ const Blog = () => {
               </div>
             </div>
             <div className="space-y-6">
-              <Newsletter />
+              {/* <Newsletter /> */}
               <CategoryList categories={categories} />
             </div>
           </div>

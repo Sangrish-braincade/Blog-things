@@ -10,7 +10,7 @@ const About = () => {
         <section className="container py-8 md:py-12">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
-              About AI Gaming Scribe
+              About Aicade
             </h1>
             <p className="mb-8 text-xl text-muted-foreground">
               Exploring the frontier where artificial intelligence meets gaming
@@ -20,7 +20,7 @@ const About = () => {
           <div className="mx-auto mt-12 max-w-3xl">
             <div className="prose prose-lg dark:prose-invert">
               <p>
-                AI Gaming Scribe was founded in 2024 by a group of AI engineers, game developers, and tech journalists who recognized that the gaming industry was undergoing a profound transformation powered by artificial intelligence.
+                Acadewas founded in 2024 by a group of AI engineers, game developers, and tech journalists who recognized that the gaming industry was undergoing a profound transformation powered by artificial intelligence.
               </p>
               
               <p>

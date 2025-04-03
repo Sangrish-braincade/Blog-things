@@ -18,7 +18,7 @@ export function Header() {
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
             <span className="bg-gradient-to-r from-gaming-purple to-gaming-blue bg-clip-text text-xl font-bold text-transparent">
-              AI Gaming Scribe
+              Aicade
             </span>
           </Link>
 

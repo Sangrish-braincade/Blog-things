@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           <div className="space-y-4">
             <h3 className="bg-gradient-to-r from-gaming-purple to-gaming-blue bg-clip-text text-xl font-bold text-transparent">
-              AI Gaming Scribe
+              Aicade
             </h3>
             <p className="text-sm text-muted-foreground">
               Insights, innovations, and inside looks at the evolving world of AI in gaming.
@@ -87,7 +87,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2025 AI Gaming Scribe. All rights reserved.</p>
+          <p>© 2025 Aicade. All rights reserved.</p>
         </div>
       </div>
     </footer>
