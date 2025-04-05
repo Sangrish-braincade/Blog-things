@@ -224,7 +224,7 @@ const CategoryPosts = () => {
                 </div>
               </div>
               <div className="space-y-6">
-                <Newsletter />
+                {/* <Newsletter /> */}
               </div>
             </div>
           )}
