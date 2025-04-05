@@ -7,7 +7,6 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -21,7 +20,6 @@ export function Header() {
               Aicade
             </span>
           </Link>
-
           <nav className="hidden gap-6 md:flex">
             <Link to="/" className="text-sm font-medium hover:text-primary">
               Home
@@ -37,12 +35,13 @@ export function Header() {
             </Link>
           </nav>
         </div>
-
         <div className="flex items-center gap-4">
           <ThemeToggle />
           <Button 
-          onClick={() => window.open('https://play.aicade.io', '_blank')}
-          variant="default" className="hidden rounded-full md:inline-flex">
+            onClick={() => window.open('https://play.aicade.io', '_blank')}
+            variant="default" 
+            className="hidden rounded-full md:inline-flex"
+          >
             Play Games
           </Button>
           <Button
@@ -50,15 +49,16 @@ export function Header() {
             size="icon"
             className="md:hidden"
             onClick={toggleMenu}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMenuOpen ? <X /> : <Menu />}
           </Button>
         </div>
       </div>
-      
-      {isMenuOpen && (
-        <div className="container pb-4 md:hidden">
-          <nav className="flex flex-col space-y-3">
+
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
+        <div className="container ">
+          <nav className="flex flex-col items-center space-y-3 p-4">
             <Link to="/" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
               Home
             </Link>
@@ -72,13 +72,15 @@ export function Header() {
               About
             </Link>
             <Button 
-            onClick={() => window.open('https://play.aicade.io', '_blank')}
-            variant="default" className="mt-2 w-full rounded-full">
+              onClick={() => window.open('https://play.aicade.io', '_blank')}
+              variant="default" 
+              className="mt-2 w-30 rounded-full"
+            >
               Play Games
             </Button>
           </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }

@@ -12,6 +12,8 @@ import Categories from "./pages/Categories";
 import CategoryPosts from "./pages/CategoryPosts";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +24,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+        <Header/>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/blog" element={<Blog />} />
@@ -31,6 +34,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>
