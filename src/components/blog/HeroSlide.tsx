@@ -80,7 +80,7 @@ export function HeroSlide({ post }: HeroSlideProps) {
         <h1 className="mb-4 text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
           {post.title}
         </h1>
-        <p className="mb-6 max-w-2xl text-gray-300">{post.excerpt}</p>
+        <p className="mb-6 max-w-2xl text-gray-300 line-clamp-3">{post.excerpt}</p>
         <Button asChild className="rounded-full w-fit">
           <Link to={`/blog/${post.slug}`}>Read Article</Link>
         </Button>
