@@ -279,6 +279,7 @@ import { PostCard } from "@/components/blog/PostCard";
 import { urlFor, getPostBySlug, getRelatedPosts, getCategories } from "@/lib/sanityQueries"; 
 import { Audio } from "react-loader-spinner";
 import Loader from "@/components/Loader";
+import { PortableText } from '@portabletext/react'
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -346,7 +347,9 @@ const BlogPost = () => {
 
             <div className="prose prose-lg mx-auto dark:prose-invert">
               {post.content ? (
-                <div>{/* Render your rich content here */}</div>
+                <div>
+                  <PortableText value={post.content} />
+                </div>
               ) : (
                 <p>{post.excerpt}</p>
               )}

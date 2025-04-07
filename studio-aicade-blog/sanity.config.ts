@@ -22,14 +22,14 @@ import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
-import 'dotenv/config' // loads variables from .env.local
+// import 'dotenv/config' // loads variables from .env.local
 
 export default defineConfig({
-  name: 'Aicade.io',
+  name: 'Aicade',
   title: 'Aicade Blog',
 
-  projectId: process.env.SANITY_PROJECT_ID!,
-  dataset: process.env.SANITY_DATASET!,
+  projectId: process.env.SANITY_PROJECT_ID! || "sr758iyp",
+  dataset: process.env.SANITY_DATASET! || "production",
 
   plugins: [structureTool(), visionTool()],
 
